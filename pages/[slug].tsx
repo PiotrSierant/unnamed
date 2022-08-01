@@ -37,23 +37,11 @@ interface Props {
 
 const Home: NextPage<Props> = ({ post }) => {
   return (
-    <AppShell
-      padding="lg"
-      header={
-        <Header height={60} p="xs">
-          <Title order={1}>Twój blog</Title>
-        </Header>
-      }
-      styles={(theme) => ({
-        main: { height: '100%' },
-      })}
-    >
-      <Container size="lg">
-        <Title order={2}>{post.title}</Title>
-        <Space h="xl" />
-        <Text style={{ whiteSpace: 'break-spaces' }}>{post.content}</Text>
-      </Container>
-    </AppShell>
+    <>
+      <Title order={2}>{post.title}</Title>
+      <Space h="xl" />
+      <Text style={{ whiteSpace: 'break-spaces' }}>{post.content}</Text>
+    </>
   );
 };
 

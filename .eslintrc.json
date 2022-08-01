@@ -12,7 +12,8 @@
         "tabWidth": 2,
         "singleQuote": true,
         "trailingComma": "all",
-        "proseWrap": "always"
+        "proseWrap": "always",
+        "endOfLine":"auto"
       }
     ]
   }

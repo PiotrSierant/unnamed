@@ -16,26 +16,14 @@ type Props = {
 
 const Home: NextPage<Props> = ({ posts }) => {
   return (
-    <AppShell
-      padding="lg"
-      header={
-        <Header height={60} p="xs">
-          <Title order={1}>Twój blog</Title>
-        </Header>
-      }
-      styles={(theme) => ({
-        main: { height: '100%' },
-      })}
-    >
-      <Container size="lg">
-        {posts.map((post) => (
-          <>
-            <Post title={post.title} date={post.createdAt} content={post.content} key={post.id} slug={post.slug} />
-            <Space h="md" />
-          </>
-        ))}
-      </Container>
-    </AppShell>
+    <>
+      {posts.map((post) => (
+        <>
+          <Post title={post.title} date={post.createdAt} content={post.content} key={post.id} slug={post.slug} />
+          <Space h="md" />
+        </>
+      ))}
+    </>
   );
 };
 
