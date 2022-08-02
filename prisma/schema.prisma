@@ -13,7 +13,7 @@ datasource db {
 model Post {
   id        String   @id @default(uuid())
   title     String
-  slug      String
+  slug      String   @unique
   content   String
   createdAt DateTime
 }
