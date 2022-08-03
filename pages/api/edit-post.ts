@@ -6,10 +6,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const body = req.body;
 
   try {
-    const post = await prisma.post.create({
+    const post = await prisma.post.update({
+      where: {
+        id: body.id,
+      },
       data: {
         ...body,
-        createdAt: new Date(),
       },
     });
 

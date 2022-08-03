@@ -1,6 +1,7 @@
-import { AppShell, Text, Container, Header, Space, Title } from '@mantine/core';
+import { AppShell, Text, Container, Header, Space, Title, Button, Group } from '@mantine/core';
 import { Post as PostPrisma } from '@prisma/client';
 import type { GetServerSidePropsContext, NextPage } from 'next';
+import Link from 'next/link';
 import { Post } from '../components/post/Post';
 
 import { prisma } from '../lib/prisma';
@@ -38,7 +39,12 @@ interface Props {
 const Home: NextPage<Props> = ({ post }) => {
   return (
     <>
-      <Title order={2}>{post.title}</Title>
+      <Group align="center" position="apart">
+        <Title order={2}>{post.title}</Title>
+        <Link href={`edit-post/${post.slug}`} passHref>
+          <Button component="a">Edytuj Wpis</Button>
+        </Link>
+      </Group>
       <Space h="xl" />
       <Text style={{ whiteSpace: 'break-spaces' }}>{post.content}</Text>
     </>
