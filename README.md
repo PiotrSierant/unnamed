@@ -1,7 +1,7 @@
 <div align="center">
     <img src="https://github.com/PiotrSierant/portfolioWeb/blob/master/public/images/logo_darkblue.svg" alt="Logo" width="80" height="80">
     
-<h3 align="center"></h3>
+<h3 align="center">unnamed</h3>
 
 <p align="center">
 <a href="https://unnamed-brown.vercel.app/">View Live</a>
